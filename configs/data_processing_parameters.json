@@ -1,0 +1,12 @@
+{
+"comment": "choose which system to use to train the model. ",
+"types_to_process": [],
+"simulation_timesteps": [-1, 0,5],
+"interaction_full": "interaction",
+"data_output_dir": "data_processed"
+
+
+
+
+
+}

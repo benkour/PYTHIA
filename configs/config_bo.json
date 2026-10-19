@@ -1,0 +1,43 @@
+{
+  "_comment_training": "=== Training parameters ===",
+  "data_dir": "data_processed",
+  "_comment_defects": "=== Defect and adsorbate parameters ===",
+  "baseline_system": "Si_CH2O",
+  "possible_defects": ["C", "Ge", "N", "P", "As", "B", "Al", "Ga", "Ni", "Cu", "Zn", "Pd", "Pt"],
+  "num_defects": 5,
+  "fixed_or_random_number_defects": "random",
+  "defect_host_element": "Si",
+  "adsorbate_xyz": "adsorbate_ch2o.xyz",
+
+
+  "_comment_placement": "=== Adsorbate placement parameters ===",
+  "periodicity": true,
+  "van_der_waals_distances": true,
+  "cell_vectors": [
+    [30.1539993286, 0.0, 0.0],
+    [-15.0769996643, 26.1141294443, 0.0],
+    [0.0, 0.0, 13.1800003052]
+  ],
+  "surface_cluster": "surface",
+  "specific_atom_closest": false,
+  "which_atom": -1,
+  "probability_of_closest": 1,
+  "non_viable_surface_atoms": ["K"],
+
+  "_comment_bo": "=== Bayesian Optimization parameters ===",
+  "bo_checkpoint_dir": "checkpoints_mace_transformer_Si",
+  "bo_output_dir": "bo_data_si",
+  "bo_samples_dir": "evaluating_positions_for_bo_si",
+  "sample_size": 10,
+  "create_new_samples": true,
+  "parallel_sample_creation": false,
+  "number_of_cores": 2,
+  "bo_acquisition": ["pe", "ucb"],
+  "bo_tradeoff": [0.1, 100],
+  "safe_mode_for_positive_definite": true,
+
+  "_comment_visualization": "=== Switch between optimization and visualization ===",
+  "visualization_optimization": "optimization",
+  "visualization_xyz_prefix": "Si_Ga_CH2O_",
+  "visualization_xyz_dir": "data_raw"
+}
